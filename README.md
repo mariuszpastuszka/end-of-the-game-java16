@@ -79,7 +79,7 @@ Business requirements
   - captcha
   - remember me functionality
   - forgot password
-- NC - calculate
+- Need to be finished - calculate
   - calculate expenses from income f.e.
   - Calculate income outcome, statistics, prices
   - wages

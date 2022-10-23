@@ -1,7 +1,7 @@
 package com.example.endofthegame.repository;
 
-import org.springframework.stereotype.Repository;
+import com.example.endofthegame.entity.Income;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class IncomesRepository {
+public interface IncomesRepository extends JpaRepository<Income, Long> {
 }

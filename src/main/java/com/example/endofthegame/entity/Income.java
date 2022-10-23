@@ -1,15 +1,26 @@
 package com.example.endofthegame.entity;
 
 import com.example.endofthegame.entity.enumeration.IncomeCategory;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
-public record Income(
-        IncomeCategory category,
-        String currency,
-        BigDecimal amount,
-        String person,
-        ZonedDateTime timestamp
-) {
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Income {
+    // TODO: improve generation of id
+    @Id
+    Long id;
+    IncomeCategory category;
+    String currency;
+    BigDecimal amount;
+    String person;
+    ZonedDateTime timestamp;
 }

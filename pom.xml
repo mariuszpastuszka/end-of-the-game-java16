@@ -8,7 +8,7 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>ee.secretagency</groupId>
     <artifactId>end-of-the-game</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>end-of-the-game</name>

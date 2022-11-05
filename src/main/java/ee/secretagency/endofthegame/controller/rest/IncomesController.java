@@ -1,7 +1,7 @@
-package com.example.endofthegame.controller.rest;
+package ee.secretagency.endofthegame.controller.rest;
 
-import com.example.endofthegame.entity.Income;
-import com.example.endofthegame.service.IncomesService;
+import ee.secretagency.endofthegame.entity.Income;
+import ee.secretagency.endofthegame.service.IncomesService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

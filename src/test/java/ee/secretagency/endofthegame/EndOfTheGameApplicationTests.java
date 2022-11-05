@@ -1,4 +1,4 @@
-package com.example.endofthegame;
+package ee.secretagency.endofthegame;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
-package com.example.endofthegame.service;
+package ee.secretagency.endofthegame.service;
 
-import com.example.endofthegame.entity.Income;
-import com.example.endofthegame.repository.IncomesRepository;
+import ee.secretagency.endofthegame.entity.Income;
+import ee.secretagency.endofthegame.repository.IncomesRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

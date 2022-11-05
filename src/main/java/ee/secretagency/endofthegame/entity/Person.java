@@ -1,4 +1,4 @@
-package com.example.endofthegame.entity;
+package ee.secretagency.endofthegame.entity;
 
 public record Person(
         String name,

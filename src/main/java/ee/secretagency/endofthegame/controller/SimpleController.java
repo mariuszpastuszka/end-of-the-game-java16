@@ -1,8 +1,8 @@
-package com.example.endofthegame.controller;
+package ee.secretagency.endofthegame.controller;
 
 
-import com.example.endofthegame.entity.Address;
-import com.example.endofthegame.entity.Person;
+import ee.secretagency.endofthegame.entity.Address;
+import ee.secretagency.endofthegame.entity.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

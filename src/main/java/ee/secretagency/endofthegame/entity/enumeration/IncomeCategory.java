@@ -1,4 +1,4 @@
-package com.example.endofthegame.entity.enumeration;
+package ee.secretagency.endofthegame.entity.enumeration;
 
 public enum IncomeCategory {
     SALARY,

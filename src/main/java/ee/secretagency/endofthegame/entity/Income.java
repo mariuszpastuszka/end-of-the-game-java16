@@ -1,6 +1,6 @@
-package com.example.endofthegame.entity;
+package ee.secretagency.endofthegame.entity;
 
-import com.example.endofthegame.entity.enumeration.IncomeCategory;
+import ee.secretagency.endofthegame.entity.enumeration.IncomeCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

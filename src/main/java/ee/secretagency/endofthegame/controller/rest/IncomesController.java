@@ -34,7 +34,7 @@ public class IncomesController {
     public ResponseEntity<Income> getIncomeById(@PathVariable("id") Long idOfIncome) {
         log.info("trying to get income with id: [{}]", idOfIncome);
 
-        Income fromRepo = service.readIncomeById(idOfIncome);
+        Income fromRepo = service.readIncomeByIdBetterWay(idOfIncome);
         boolean exists = fromRepo != null;
         if (exists) {
             return ResponseEntity.ok(fromRepo);

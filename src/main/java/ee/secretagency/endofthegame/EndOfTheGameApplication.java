@@ -1,10 +1,9 @@
 package ee.secretagency.endofthegame;
 
-import ee.secretagency.homework.exercise1.Calculator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
+// TODO: Explain scanning with @SpringBootApplication for calculator bean
 @SpringBootApplication
 public class EndOfTheGameApplication {
 
@@ -12,8 +11,9 @@ public class EndOfTheGameApplication {
         SpringApplication.run(EndOfTheGameApplication.class, args);
     }
 
-    @Bean
-    public Calculator calculator() {
-        return new Calculator();
-    }
+// use @Bean for direct creation of spring beans
+//    @Bean
+//    public Calculator calculator() {
+//        return new Calculator();
+//    }
 }

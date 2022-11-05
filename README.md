@@ -27,7 +27,7 @@ REST - hierarchical resources
     - GET http method
     - return: 
       - existing income: single item + 200 Http return code
-      - nonexistent income:  
+      - nonexistent income: error object + 404 Http return code 
   - Create:
     - url: /incomes
     - POST http method

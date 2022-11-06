@@ -79,7 +79,7 @@ public class IncomesService {
         if (repository.existsById(id)) {
             repository.deleteById(id);
         } else {
-            throw new IncomeNotFoundException("No existing income with id: [%d]".formatted(id));
+            throw new IncomeNotFoundException("No entity with id: [{%d}]".formatted(id));
         }
     }
 }

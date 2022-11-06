@@ -39,6 +39,6 @@ public class IncomeController {
     public void deleteIncomeById(@PathVariable("id") Long id) {
         log.info("trying to delete income with id: [{}]", id);
 
-        service.deleteIncomeWithId(id);
+        service.deleteIncomeWithIdBetter(id);
     }
 }

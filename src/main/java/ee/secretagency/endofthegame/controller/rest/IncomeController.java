@@ -1,14 +1,10 @@
 package ee.secretagency.endofthegame.controller.rest;
 
 import ee.secretagency.endofthegame.entity.Income;
-import ee.secretagency.endofthegame.exception.IncomeNotFoundException;
 import ee.secretagency.endofthegame.service.IncomesService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,5 +32,13 @@ public class IncomeController {
         log.info("trying to get income with id: [{}]", idOfIncome);
 
         return service.readIncomeByIdBetterWay(idOfIncome);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/incomes/{id}")
+    public void deleteIncomeById(@PathVariable("id") Long id) {
+        log.info("trying to delete income with id: [{}]", id);
+
+        service.deleteIncomeWithId(id);
     }
 }

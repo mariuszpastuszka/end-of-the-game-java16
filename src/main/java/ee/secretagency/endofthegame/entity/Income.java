@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
@@ -17,8 +14,8 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Income {
-    // TODO: improve generation of id
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Enumerated(EnumType.STRING)
     IncomeCategory category;

@@ -27,6 +27,7 @@ public class Income {
     ZonedDateTime creationTimestamp;
     ZonedDateTime updateTimestamp;
 
+    // TODO: handle creation timestamp during updating record at db
     @PrePersist
     private void initCreationTimestamp() {
         creationTimestamp = ZonedDateTime.now();

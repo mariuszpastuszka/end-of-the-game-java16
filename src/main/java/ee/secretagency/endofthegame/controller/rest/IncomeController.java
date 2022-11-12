@@ -41,4 +41,9 @@ public class IncomeController {
 
         service.deleteIncomeWithIdBetter(id);
     }
+
+    @PostMapping("/incomes")
+    public void createNewIncome(@RequestBody Income income) {
+        log.info("creating new income: [{}]", income);
+    }
 }

@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class IncomeController {
 
     // TODO: fix id from the income
     @PostMapping("/incomes")
-    public ResponseEntity<Income> createNewIncome(@RequestBody Income income) {
+    public ResponseEntity<Income> createNewIncome(@Valid @RequestBody Income income) {
         log.info("creating new income: [{}]", income);
 
         Income newIncome = service.createNewIncome(income);

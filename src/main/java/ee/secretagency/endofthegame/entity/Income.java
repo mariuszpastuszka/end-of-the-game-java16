@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
@@ -19,9 +22,17 @@ public class Income {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Enumerated(EnumType.STRING)
+    @NotNull
     IncomeCategory category;
+
+    @NotNull
+    @Size(min = 3)
     String currency;
+
+    @NotNull
+    @Positive
     BigDecimal amount;
+
     String person;
     ZonedDateTime timestamp;
     ZonedDateTime creationTimestamp;

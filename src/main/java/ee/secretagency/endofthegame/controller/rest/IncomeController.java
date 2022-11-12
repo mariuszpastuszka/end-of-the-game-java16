@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @RestController
@@ -42,8 +43,14 @@ public class IncomeController {
         service.deleteIncomeWithIdBetter(id);
     }
 
+    // TODO: fix id from the income
     @PostMapping("/incomes")
     public void createNewIncome(@RequestBody Income income) {
         log.info("creating new income: [{}]", income);
+
+        if (income.getTimestamp() == null) {
+            income.setTimestamp(ZonedDateTime.now());
+        }
+        service.createNewIncome(income);
     }
 }

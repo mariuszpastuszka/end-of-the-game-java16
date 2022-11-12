@@ -82,4 +82,10 @@ public class IncomesService {
             throw new IncomeNotFoundException("No entity with id: [{%d}]".formatted(id));
         }
     }
+
+    public void createNewIncome(Income income) {
+        log.info("object before saving: [{}]", income);
+        Income saved = repository.save(income);
+        log.info("object after saving: [{}]", saved);
+    }
 }

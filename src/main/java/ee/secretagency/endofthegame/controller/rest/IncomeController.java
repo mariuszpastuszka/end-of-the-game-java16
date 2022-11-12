@@ -48,9 +48,6 @@ public class IncomeController {
     public void createNewIncome(@RequestBody Income income) {
         log.info("creating new income: [{}]", income);
 
-        if (income.getTimestamp() == null) {
-            income.setTimestamp(ZonedDateTime.now());
-        }
         service.createNewIncome(income);
     }
 }

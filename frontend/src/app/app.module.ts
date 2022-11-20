@@ -9,12 +9,15 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {ExpenseListComponent} from './components/expense-list/expense-list.component';
 import {RouterModule} from "@angular/router";
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent,
     IncomeListComponent,
-    ExpenseListComponent
+    ExpenseListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +28,10 @@ import {RouterModule} from "@angular/router";
     RouterModule.forRoot([
       {path: '', component: IncomeListComponent},
       {path: 'income-list', component: IncomeListComponent},
-      {path: 'expense-list', component: ExpenseListComponent}
-    ])
+      {path: 'expense-list', component: ExpenseListComponent},
+      {path: '**', component: NotFoundComponent}
+    ]),
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

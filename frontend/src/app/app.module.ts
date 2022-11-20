@@ -7,11 +7,13 @@ import { IncomeListComponent } from './components/income-list/income-list.compon
 import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IncomeListComponent
+    IncomeListComponent,
+    ExpenseListComponent
   ],
   imports: [
     BrowserModule,

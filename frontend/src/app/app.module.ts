@@ -11,13 +11,16 @@ import {ExpenseListComponent} from './components/expense-list/expense-list.compo
 import {RouterModule} from "@angular/router";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
     AppComponent,
     IncomeListComponent,
     ExpenseListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {MatIconModule} from "@angular/material/icon";
       {path: 'expense-list', component: ExpenseListComponent},
       {path: '**', component: NotFoundComponent}
     ]),
-    MatIconModule
+    MatIconModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

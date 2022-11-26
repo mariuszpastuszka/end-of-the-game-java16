@@ -4,3 +4,4 @@ export const allIncomesUrl = `${server}/api/incomes`
 export const homeUrl = ''
 export const incomeListUrl = 'income-list'
 export const expenseListUrl = 'expense-list'
+export const createNewIncomeUrl = 'create-new-income'

@@ -13,6 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { NewIncomeComponent } from './components/new-income/new-income.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     IncomeListComponent,
     ExpenseListComponent,
     NotFoundComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    NewIncomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
       {path: '', component: IncomeListComponent},
       {path: 'income-list', component: IncomeListComponent},
       {path: 'expense-list', component: ExpenseListComponent},
+      {path: 'create-new-income', component: NewIncomeComponent},
       {path: '**', component: NotFoundComponent}
     ]),
     MatIconModule,

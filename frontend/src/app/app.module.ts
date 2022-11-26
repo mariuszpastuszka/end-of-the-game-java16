@@ -14,6 +14,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { NewIncomeComponent } from './components/new-income/new-income.component';
+import {createNewIncomeUrl, expenseListUrl, homeUrl, incomeListUrl, notFoundUrl} from "./models/urls";
 
 @NgModule({
   declarations: [
@@ -31,11 +32,11 @@ import { NewIncomeComponent } from './components/new-income/new-income.component
     MatCardModule,
     MatButtonModule,
     RouterModule.forRoot([
-      {path: '', component: IncomeListComponent},
-      {path: 'income-list', component: IncomeListComponent},
-      {path: 'expense-list', component: ExpenseListComponent},
-      {path: 'create-new-income', component: NewIncomeComponent},
-      {path: '**', component: NotFoundComponent}
+      {path: homeUrl, component: IncomeListComponent},
+      {path: incomeListUrl, component: IncomeListComponent},
+      {path: expenseListUrl, component: ExpenseListComponent},
+      {path: createNewIncomeUrl, component: NewIncomeComponent},
+      {path: notFoundUrl, component: NotFoundComponent}
     ]),
     MatIconModule,
     MatButtonToggleModule

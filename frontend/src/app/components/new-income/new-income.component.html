@@ -1,1 +1,14 @@
-<p>new-income works!</p>
+<h2>Create new income</h2>
+
+<form (ngSubmit)="onSubmitData()">
+  <mat-form-field appearance="fill">
+    <mat-label>Income category</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let category of categories" [value]="category">
+        {{category}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Create new income</button>
+</form>

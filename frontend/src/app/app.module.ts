@@ -15,6 +15,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { NewIncomeComponent } from './components/new-income/new-income.component';
 import {createNewIncomeUrl, expenseListUrl, homeUrl, incomeListUrl, notFoundUrl} from "./models/urls";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {createNewIncomeUrl, expenseListUrl, homeUrl, incomeListUrl, notFoundUrl}
       {path: notFoundUrl, component: NotFoundComponent}
     ]),
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

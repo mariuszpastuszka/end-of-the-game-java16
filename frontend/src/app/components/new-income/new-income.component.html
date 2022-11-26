@@ -9,6 +9,22 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
+  <br>
+  <label id="radio-group-label">Pick your currency</label>
+  <mat-radio-group
+    aria-labelledby="radio-group-label"
+    class="radio-group">
+    <mat-radio-button class="radio-button" *ngFor="let currency of currencies" [value]="currency">
+      {{currency}}
+    </mat-radio-button>
+    <mat-radio-button class="radio-button" [value]="">
+      Provide Your currency
+    </mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field>
+    <mat-label>Currency</mat-label>
+    <input matInput placeholder="Provide currency" value="EUR">
+  </mat-form-field>
 
   <button type="submit" mat-raised-button color="primary">Create new income</button>
 </form>

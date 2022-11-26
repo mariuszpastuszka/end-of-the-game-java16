@@ -17,6 +17,8 @@ import { NewIncomeComponent } from './components/new-income/new-income.component
 import {createNewIncomeUrl, expenseListUrl, homeUrl, incomeListUrl, notFoundUrl} from "./models/urls";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {MatSelectModule} from "@angular/material/select";
     MatIconModule,
     MatButtonToggleModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,6 +17,15 @@ export class NewIncomeComponent implements OnInit {
     {displayedValue: 'Other', value: 'OTHER'}
   ]
 
+  currencies = [
+    'EUR',
+    'PLN',
+    'CAN',
+    'USD',
+    'UAH',
+    'GBP'
+  ]
+
   constructor() {
   }
 

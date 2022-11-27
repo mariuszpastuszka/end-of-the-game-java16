@@ -18,11 +18,12 @@
     <mat-radio-button class="radio-button" *ngFor="let currency of currencies" [value]="currency">
       {{currency}}
     </mat-radio-button>
-    <mat-radio-button class="radio-button" [value]="customCurrency.value">
+    <mat-radio-button #radioButton class="radio-button" [value]="customCurrency.value">
       Provide Your currency
     </mat-radio-button>
   </mat-radio-group>
-<!--  TODO: make this field dynamic-->
+<!--  // TODO: fix visibility-->
+<!--  //  *ngIf="!radioButton.checked-->
   <mat-form-field>
     <mat-label>Currency</mat-label>
     <input #customCurrency matInput placeholder="Provide currency" value="EUR">

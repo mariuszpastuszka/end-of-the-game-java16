@@ -29,8 +29,24 @@
 
   <mat-form-field>
     <mat-label>Amount</mat-label>
-    <input matNativeControl type="number" placeholder="100" value="100">
+    <input matNativeControl step="0.1" type="number"  placeholder="100" value="100">
   </mat-form-field>
 
+  <br>
+  <mat-form-field>
+    <mat-label>Person</mat-label>
+    <input matInput placeholder="Type person name" value="Me:)">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <br>
   <button type="submit" mat-raised-button color="primary">Create new income</button>
 </form>

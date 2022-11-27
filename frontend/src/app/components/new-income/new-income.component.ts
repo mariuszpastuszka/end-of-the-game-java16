@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {IncomeService} from "../../services/income-service/income.service";
 import {Income} from "../../models/income";
+import {Router} from "@angular/router";
+import {incomeListUrl} from "../../models/urls";
 
 @Component({
   selector: 'app-new-income',
@@ -37,7 +39,8 @@ export class NewIncomeComponent implements OnInit {
     timestamp: new FormControl<Date>(new Date())
   })
 
-  constructor(private incomeService: IncomeService) {
+  constructor(private incomeService: IncomeService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -49,7 +52,9 @@ export class NewIncomeComponent implements OnInit {
     const income = this.createIncomeBasedOnFormValues()
     console.log("sending data to backend: " + JSON.stringify(income, null, 2))
     this.incomeService.createNewIncome(income)
-      .subscribe()
+      .subscribe(
+        () => this.router.navigate([incomeListUrl])
+      )
   }
 
   private createIncomeBasedOnFormValues(): Income {

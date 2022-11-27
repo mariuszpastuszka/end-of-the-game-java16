@@ -21,6 +21,7 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -31,28 +32,29 @@ import {MatNativeDateModule} from "@angular/material/core";
     NavigationBarComponent,
     NewIncomeComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatCardModule,
-        MatButtonModule,
-        RouterModule.forRoot([
-            {path: homeUrl, component: IncomeListComponent},
-            {path: incomeListUrl, component: IncomeListComponent},
-            {path: expenseListUrl, component: ExpenseListComponent},
-            {path: createNewIncomeUrl, component: NewIncomeComponent},
-            {path: notFoundUrl, component: NotFoundComponent}
-        ]),
-        MatIconModule,
-        MatButtonToggleModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatRadioModule,
-        MatInputModule,
-        MatDatepickerModule,
-        MatNativeDateModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    RouterModule.forRoot([
+      {path: homeUrl, component: IncomeListComponent},
+      {path: incomeListUrl, component: IncomeListComponent},
+      {path: expenseListUrl, component: ExpenseListComponent},
+      {path: createNewIncomeUrl, component: NewIncomeComponent},
+      {path: notFoundUrl, component: NotFoundComponent}
+    ]),
+    MatIconModule,
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

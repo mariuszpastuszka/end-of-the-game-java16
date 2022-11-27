@@ -1,5 +1,5 @@
 export interface Income {
-  id: string,
+  id: string | null,
 
   category: string,
 
@@ -11,7 +11,7 @@ export interface Income {
 
   timestamp: string,
 
-  creationTimestamp: string,
+  creationTimestamp: string | null,
 
   updateTimestamp: string | null
 }

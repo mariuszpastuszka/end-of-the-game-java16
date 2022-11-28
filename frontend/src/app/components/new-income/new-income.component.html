@@ -24,10 +24,13 @@
   </mat-radio-group>
 <!--  // TODO: fix visibility-->
 <!--  //  *ngIf="!radioButton.checked-->
-  <mat-form-field>
-    <mat-label>Currency</mat-label>
-    <input #customCurrency matInput placeholder="Provide currency" value="EUR">
-  </mat-form-field>
+  <div [hidden]="!radioButton.checked">
+    <mat-form-field>
+      <mat-label>Currency</mat-label>
+      <input #customCurrency matInput placeholder="Provide currency" value="EUR">
+    </mat-form-field>
+  </div>
+
 
   <mat-form-field>
     <mat-label>Amount</mat-label>
